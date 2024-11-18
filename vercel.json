@@ -1,0 +1,18 @@
+{
+    "builds": [
+        {
+            "src": "Voice_recorder/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.9"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "Voice_recorder/wsgi.py"
+        }
+    ]
+}
